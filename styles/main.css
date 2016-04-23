@@ -626,5 +626,57 @@ textarea {
     margin-right: 2%; }
     .col-lg-12:last-child {
       margin-right: 0; } }
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif; }
+
+h1 {
+  font-size: 4.23606798rem;
+  color: #fff;
+  position: relative; }
+
+h2 {
+  font-size: 1.61803399rem;
+  line-height: 1.6; }
+
+ul {
+  margin: 0;
+  padding: 0; }
+
+.image-wrapper {
+  overflow: hidden;
+  padding: 2rem;
+  background-size: cover;
+  min-height: 20rem;
+  margin-bottom: 1em; }
+  .image-wrapper h1 {
+    font-size: 2rem;
+    max-width: 50%; }
+
+img {
+  width: 100%; }
+
+@media (min-width: 900px) {
+  .image-wrapper:nth-child(3n+2) {
+    width: 48%;
+    float: left;
+    margin-left: 1%;
+    margin-right: 1%; }
+    .image-wrapper:nth-child(3n+2) h1 {
+      font-size: 1.61803399rem; }
+  .image-wrapper:nth-child(3n+1) {
+    width: 100%;
+    clear: both; }
+    .image-wrapper:nth-child(3n+1) h1 {
+      font-size: 4.23606798rem; }
+  .image-wrapper:nth-child(3n+3) {
+    width: 48%;
+    float: left;
+    margin-left: 1%;
+    margin-right: 1%; }
+    .image-wrapper:nth-child(3n+3) h1 {
+      font-size: 1.61803399rem; } }
 
 /*# sourceMappingURL=main.css.map */

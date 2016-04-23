@@ -1,2 +1,73 @@
 @import 'normalize',
-'grid';
+'grid',
+'colors';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+h1 {
+    font-size: 4.23606798rem;
+    color: $neutral-light;
+    position: relative;
+}
+
+h2 {
+    font-size: 1.61803399rem;
+    line-height: 1.6;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.image-wrapper {
+    overflow: hidden;
+    padding: 2rem;
+    background-size: cover;
+    min-height: 20rem;
+    margin-bottom: 1em;
+    h1 {
+        font-size: 2rem;
+        max-width: 50%;
+    }
+}
+
+img {
+    width: 100%;
+}
+
+@media (min-width: 900px) {
+    .image-wrapper {
+        &:nth-child(3n+2) {
+            width: 48%;
+            float: left;
+            margin-left: 1%;
+            margin-right: 1%;
+            h1 {
+                font-size: 1.61803399rem;
+            }
+        }
+        &:nth-child(3n+1) {
+            width: 100%;
+            clear: both;
+            h1 {
+                font-size: 4.23606798rem;
+            }
+        }
+        &:nth-child(3n+3) {
+            width: 48%;
+            float: left;
+            margin-left: 1%;
+            margin-right: 1%;
+            h1 {
+                font-size: 1.61803399rem;
+            }
+        }
+    }
+}
