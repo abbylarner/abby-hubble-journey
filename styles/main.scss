@@ -1,7 +1,6 @@
 @import 'normalize',
 'grid',
 'colors';
-
 * {
     box-sizing: border-box;
 }
@@ -26,6 +25,72 @@ ul {
     padding: 0;
 }
 
+nav {
+    background-color: $neutral-med;
+    .hamburger-icon {
+        display: inline-block;
+        font-size: 28px;
+        margin-right: 2rem;
+        a {
+            color: $neutral-light;
+            text-decoration: none;
+        }
+    }
+    .logo {
+        width: 50px;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+    .link-wrapper {
+        float: right;
+        display: none;
+        li {
+            width: 100%;
+            text-align: left;
+            padding-left: 3rem;
+        }
+    }
+    p {
+        color: $neutral-light;
+        line-height: 70px;
+        margin: 0;
+        padding-left: 3rem;
+        span {
+            font-weight: bold;
+        }
+    }
+    ul {
+        list-style: none;
+        li {
+            float: left;
+            line-height: 70px;
+            a {
+                font-weight: bold;
+                color: $neutral-light;
+                text-decoration: none;
+                &:hover {
+                    border-bottom: 2px solid #777677;
+                }
+            }
+        }
+    }
+}
+
+.hero {
+    background-color: $primary-color;
+    padding: 2rem;
+    overflow: hidden;
+    h1 {
+        margin: 0;
+        font-size: 4rem;
+        float: left;
+    }
+    h2 {
+        color: $neutral-light;
+        float: left;
+    }
+}
+
 .image-wrapper {
     overflow: hidden;
     padding: 2rem;
@@ -42,7 +107,40 @@ img {
     width: 100%;
 }
 
+@media (min-width: 750px) {
+    .hero {
+        padding: 4rem;
+        h1,
+        h2 {
+            width: 50%;
+            float: left;
+        }
+    }
+}
+
 @media (min-width: 900px) {
+    nav {
+        height: 70px;
+        ul {
+            li {
+                text-align: center;
+            }
+        }
+        .link-wrapper {
+            display: block;
+            li {
+                width: 49%;
+                float: left;
+                padding-left: 0;
+            }
+        }
+    }
+    .hero {
+        h1,
+        h2 {
+            max-width: 633px;
+        }
+    }
     .image-wrapper {
         &:nth-child(3n+2) {
             width: 48%;
