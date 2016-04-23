@@ -1,6 +1,5 @@
 (function() {
-
-function getFlickrData (response) {
+	function getFlickrData (response) {
 		var flickrData = JSON.parse(this.responseText);
 		var flickrPhotoObj = flickrData.photos.photo;
 		var timelineWrapper = document.getElementById('timeline');
@@ -25,5 +24,36 @@ function getFlickrData (response) {
 	flickrDataReq.addEventListener("load", getFlickrData);
 	flickrDataReq.open("GET", "https://api.flickr.com/services/rest/?method=flickr.people.getPublicPhotos&api_key=a5e95177da353f58113fd60296e1d250&user_id=24662369@N07&format=json&nojsoncallback=1");
 	flickrDataReq.send();
+
+	var linkToggle = document.getElementById('link-toggle');
+	var menuToggle = document.getElementById('menu-toggle');
+
+	document.getElementById('menu-toggle').addEventListener('click', function(e){
+		e.preventDefault();
+		if(linkToggle.style.display != 'none'){
+			linkToggle.style.display = 'none';
+		}
+		else {
+			linkToggle.style.display = 'block';
+		}
+	});
+
+
+	toggleMenu();
+
+	function toggleMenu(){
+		var browserWidth = document.documentElement.clientWidth;
+		if(browserWidth > 900){
+			menuToggle.style.display = 'none';
+			linkToggle.style.display = 'block';
+		}
+		else {
+			menuToggle.style.display = 'block';
+			linkToggle.style.display = 'none';
+		}
+	}
+
+	window.addEventListener('resize', toggleMenu);
+
 
 })();

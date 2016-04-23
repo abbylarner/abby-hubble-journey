@@ -1,6 +1,6 @@
 @import 'normalize',
-'grid',
-'colors';
+'colors',
+'grid';
 * {
     box-sizing: border-box;
 }
@@ -89,6 +89,34 @@ nav {
         color: $neutral-light;
         float: left;
     }
+
+    .inner-hero {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+    .rocket-ship-wrapper {
+        width: 40%;
+        margin: 0 auto;
+    }
+    .flame {
+        stroke: #FFFFFF;
+        stroke-width: 2;
+        fill: none;
+        animation-name: flicker;
+        animation-duration: 3ms;
+        animation-delay: 200ms;
+        animation-timing-function: ease-in;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+    }
+    .rocket-ship {
+        fill: none;
+        stroke: #FFFFFF;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-miterlimit: 10;
+    }
 }
 
 .image-wrapper {
@@ -107,6 +135,27 @@ img {
     width: 100%;
 }
 
+@keyframes flicker {
+    0% {
+        transform: rotate(-0.3deg);
+    }
+    20% {
+        transform: rotate(0.3deg);
+    }
+    40% {
+        transform: rotate(-0.3deg);
+    }
+    60% {
+        transform: rotate(0.3deg);
+    }
+    80% {
+        transform: rotate(-0.3deg);
+    }
+    100% {
+        transform: rotate(0.3deg);
+    }
+}
+
 @media (min-width: 750px) {
     .hero {
         padding: 4rem;
@@ -115,6 +164,9 @@ img {
             width: 50%;
             float: left;
         }
+    }
+    .rocket-ship-wrapper {
+        float: right;
     }
 }
 
@@ -140,29 +192,6 @@ img {
         h2 {
             max-width: 633px;
         }
-        .rocket-ship-wrapper {
-        width: 40%;
-        margin: 0 auto;
-    }
-    .flame {
-        stroke: #FFFFFF;
-        stroke-width: 2;
-        fill: none;
-        animation-name: flicker;
-        animation-duration: 3ms;
-        animation-delay: 200ms;
-        animation-timing-function: ease-in;
-        animation-iteration-count: infinite;
-        animation-direction: alternate;
-    }
-    .rocket-ship {
-        fill: none;
-        stroke: #FFFFFF;
-        stroke-width: 2;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-        stroke-miterlimit: 10;
-    }
     }
     .image-wrapper {
         &:nth-child(3n+2) {
