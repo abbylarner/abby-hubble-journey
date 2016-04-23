@@ -731,6 +731,26 @@ img {
   .hero h1,
   .hero h2 {
     max-width: 633px; }
+  .hero .rocket-ship-wrapper {
+    width: 40%;
+    margin: 0 auto; }
+  .hero .flame {
+    stroke: #FFFFFF;
+    stroke-width: 2;
+    fill: none;
+    animation-name: flicker;
+    animation-duration: 3ms;
+    animation-delay: 200ms;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; }
+  .hero .rocket-ship {
+    fill: none;
+    stroke: #FFFFFF;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10; }
 
   .image-wrapper:nth-child(3n+2) {
     width: 48%;
